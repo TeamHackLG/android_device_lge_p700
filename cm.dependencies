@@ -1,7 +1,8 @@
 [
  {
-   "repository": "lge-kernel-p700",
+   "account": "TeamHackLG"
+   "repository": "lge-kernel-lproj",
    "target_path": "kernel/lge/msm7x27a-common",
-   "branch": "android-msm-3.4"
+   "branch": "android-msm-3.4-jb42"
  }
 ]
