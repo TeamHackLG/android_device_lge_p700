@@ -34,9 +34,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnetcmdiface
 
-# HW HALS
-PRODUCT_PACKAGES += \
-    gps.p700
 
 PRODUCT_NAME := full_p700
 PRODUCT_DEVICE := p700
