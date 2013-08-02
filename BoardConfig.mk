@@ -13,15 +13,9 @@ TARGET_PREBUILT_KERNEL := device/lge/p700/kernel
 ## We need this for the flipped screen
 BOARD_CUSTOM_GRAPHICS := ../../../device/lge/p700/recovery/graphics.c
 
-# Enable gsm and network search
-COMMON_GLOBAL_CFLAGS += -DFORCE_RILD_AS_ROOT # Not sure if this is needed
-BOARD_FORCE_RILD_AS_ROOT := true
-BOARD_USES_LEGACY_RIL := true
-# wifi
 
 LGE_PROJECT := l
 
-BOARD_USE_LEGACY_SENSORS_FUSION := false
 
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/p700/bluetooth
 
