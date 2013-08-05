@@ -19,7 +19,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/melfas-ts.idc:system/usr/idc/melfas-ts.idc \
     $(LOCAL_PATH)/configs/melfas-ts.kl:system/usr/keylayout/qwerty.kl \
     $(LOCAL_PATH)/configs/melfas-ts.kl:system/usr/keylayout/melfas-ts.kl \
-    $(LOCAL_PATH)/configs/fstab.p700:root/fstab.p700
+    $(LOCAL_PATH)/configs/fstab.u0:root/fstab.u0
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
