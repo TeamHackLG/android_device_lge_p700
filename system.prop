@@ -4,5 +4,3 @@
 ro.sf.hwrotation=180
 
 ro.sf.lcd_density=240
-
-dalvik.vm.dexopt-data-only=1
