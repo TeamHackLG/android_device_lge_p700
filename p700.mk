@@ -28,9 +28,20 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml
 
+# Bionic libs - fixes camera
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/bin/linker:system/bin/linker \
+    $(LOCAL_PATH)/prebuilt/lib/libc.so:system/lib/libc.so \
+    $(LOCAL_PATH)/prebuilt/lib/libdl.so:system/lib/libdl.so \
+    $(LOCAL_PATH)/prebuilt/lib/liblog.so:system/lib/liblog.so \
+    $(LOCAL_PATH)/prebuilt/lib/libm.so:system/lib/libm.so \
+    $(LOCAL_PATH)/prebuilt/lib/libstdc++.so:system/lib/libstdc++.so \
+    $(LOCAL_PATH)/prebuilt/lib/libthread_db.so:system/lib/libthread_db.so
+
 # Wifi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/wlan.ko:system/lib/modules/wlan.ko
+
 # Misc
 PRODUCT_PACKAGES += \
     libnetcmdiface
