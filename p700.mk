@@ -12,7 +12,6 @@ PRODUCT_AAPT_CONFIG := normal hdpi
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.u0.rc:root/init.u0.rc \
-    $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab  \
     $(LOCAL_PATH)/ueventd.u0.rc:root/ueventd.u0.rc
 
 PRODUCT_COPY_FILES += \
