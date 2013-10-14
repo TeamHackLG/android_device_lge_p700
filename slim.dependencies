@@ -15,7 +15,7 @@
    "branch": "cm-10.2"
  },
  {
-   "repository": "SlimRoms/android_hardware_qcom_media-caf",
+   "repository": "SlimRoms/hardware_qcom_media-caf",
    "target_path": "hardware/qcom/media-caf",
    "branch": "jb4.3"
  },
