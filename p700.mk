@@ -1,6 +1,3 @@
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
-
 $(call inherit-product, device/lge/msm7x27a-common/msm7x27a-common.mk)
 $(call inherit-product-if-exists, vendor/lge/p700/p700-vendor.mk)
 
@@ -20,9 +17,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/melfas-ts.kl:system/usr/keylayout/qwerty.kl \
     $(LOCAL_PATH)/configs/melfas-ts.kl:system/usr/keylayout/melfas-ts.kl \
     $(LOCAL_PATH)/configs/fstab.u0:root/fstab.u0
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Permission files
 PRODUCT_COPY_FILES += \
