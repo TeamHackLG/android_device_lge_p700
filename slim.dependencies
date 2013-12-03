@@ -12,7 +12,7 @@
  {
    "repository": "TeamHackLG/android_device_lge_msm7x27a-common",
    "target_path": "kernel/lge/msm7x27a-common",
-   "branch": "cm-11.0"
+   "branch": "slimkat"
  },
  {
    "repository": "TeamHackLG/hardware_qcom_media-caf",
