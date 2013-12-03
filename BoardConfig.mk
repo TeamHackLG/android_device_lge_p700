@@ -16,6 +16,4 @@ BOARD_CUSTOM_GRAPHICS := ../../../device/lge/p700/recovery/graphics.c
 
 LGE_PROJECT := l
 
-BOARD_USE_LEGACY_SENSORS_FUSION := false
-
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/p700/bluetooth
