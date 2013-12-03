@@ -2,26 +2,26 @@
  {
    "repository": "TeamHackLG/lge-kernel-lproj",
    "target_path": "kernel/lge/msm7x27a-common",
-   "branch": "android-msm-3.4-jb4.3"
+   "branch": "android-msm-3.4-kk"
  },
  {
    "repository": "TeamHackLG/proprietary_vendor_lge",
    "target_path": "vendor/lge",
-   "branch": "cm-10.2"
+   "branch": "cm-11.0"
  },
  {
    "repository": "TeamHackLG/android_device_lge_msm7x27a-common",
    "target_path": "kernel/lge/msm7x27a-common",
-   "branch": "cm-10.2"
+   "branch": "cm-11.0"
  },
  {
-   "repository": "SlimRoms/hardware_qcom_media-caf",
+   "repository": "TeamHackLG/hardware_qcom_media-caf",
    "target_path": "hardware/qcom/media-caf",
-   "branch": "jb4.3"
+   "branch": "cm-11.0"
  },
  {
    "repository": "TeamHackLG/android_hardware_qcom_display-caf",
    "target_path": "hardware/qcom/display-caf",
-   "branch": "cm-10.2"
+   "branch": "cm-11.0"
  }
 ]
