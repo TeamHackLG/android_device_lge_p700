@@ -5,24 +5,12 @@ on fs
 
     swapon_all fstab.u0
 
+on early-boot
+    chmod 0777 /dev/input/event0
+    chmod 0777 /dev/input/event5
+    chmod 0777 /dev/input/event3
+
 on boot
-    chown system system /sys/class/input/input2/range
-    chown system system /sys/class/input/input2/bandwidth
-    chown system system /sys/class/input/input2/mode
-    chown system system /sys/class/input/input2/value
-    chown system system /sys/class/input/input2/delay
-    chown system system /sys/class/input/input2/update
-    chown system system /sys/class/input/input2/selftest
-    chown system system /sys/class/input/input2/offset_filt_x
-    chown system system /sys/class/input/input2/offset_filt_y
-    chown system system /sys/class/input/input2/offset_filt_z
-    chown system system /sys/class/input/input2/fast_calibration_x
-    chown system system /sys/class/input/input2/fast_calibration_y
-    chown system system /sys/class/input/input2/fast_calibration_z
-    chown system system /sys/class/input/input2/eeprom_writing
-    chown system system /sys/class/input/input2/softreset
-    chown system system /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
-    chmod 0660 /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
 
     write /proc/sys/vm/page-cluster 0
 
@@ -40,3 +28,26 @@ on property:init.svc.charger=running
     write /sys/class/android_usb/android0/functions adb
     write /sys/class/android_usb/android0/enable 1
     start adbd
+
+on post-fs-data
+
+    chown system system /sys/module/lge_emmc_direct_access/parameters/lcd_k_cal
+    chown system system /sys/devices/platform/msm_fb.590593/mdp_kcal
+    chmod 0755 /sys/devices/platform/msm_fb.590593/mdp_kcal
+
+    chown system system /sys/class/input/input3/range
+    chown system system /sys/class/input/input3/bandwidth
+    chown system system /sys/class/input/input3/mode
+    chown system system /sys/class/input/input3/value
+    chown system system /sys/class/input/input3/delay
+    chown system system /sys/class/input/input3/update
+    chown system system /sys/class/input/input3/selftest
+    chown system system /sys/class/input/input3/offset_filt_x
+    chown system system /sys/class/input/input3/offset_filt_y
+    chown system system /sys/class/input/input3/offset_filt_z
+    chown system system /sys/class/input/input3/fast_calibration_x
+    chown system system /sys/class/input/input3/fast_calibration_y
+    chown system system /sys/class/input/input3/fast_calibration_z
+    chown system system /sys/class/input/input3/eeprom_writing
+    chown system system /sys/class/input/input3/softreset
+    chown system system /sys/devices/platform/i2c-gpio.6/i2c-6/6-0044/enable
