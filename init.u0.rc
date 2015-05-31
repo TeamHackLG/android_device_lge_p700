@@ -3,24 +3,16 @@ import init.lge-shared.rc
 on fs
     mount_all fstab.u0
 
+    swapon_all fstab.u0
+
+on early-boot
+    chmod 0777 /dev/input/event0
+    chmod 0777 /dev/input/event5
+    chmod 0777 /dev/input/event3
+
 on boot
-    chown system system /sys/class/input/input2/range
-    chown system system /sys/class/input/input2/bandwidth
-    chown system system /sys/class/input/input2/mode
-    chown system system /sys/class/input/input2/value
-    chown system system /sys/class/input/input2/delay
-    chown system system /sys/class/input/input2/update
-    chown system system /sys/class/input/input2/selftest
-    chown system system /sys/class/input/input2/offset_filt_x
-    chown system system /sys/class/input/input2/offset_filt_y
-    chown system system /sys/class/input/input2/offset_filt_z
-    chown system system /sys/class/input/input2/fast_calibration_x
-    chown system system /sys/class/input/input2/fast_calibration_y
-    chown system system /sys/class/input/input2/fast_calibration_z
-    chown system system /sys/class/input/input2/eeprom_writing
-    chown system system /sys/class/input/input2/softreset
-    chown system system /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
-    chmod 0660 /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
+
+    write /proc/sys/vm/page-cluster 0
 
 ## chargermode will crash badly unless USB is configured
 on property:init.svc.charger=running
@@ -37,22 +29,25 @@ on property:init.svc.charger=running
     write /sys/class/android_usb/android0/enable 1
     start adbd
 
-## Power profiles (CM QS tile)
+on post-fs-data
 
-# Powersave
-on property:sys.perf.profile=0
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "conservative"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq "1008000"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq "122880"
+    chown system system /sys/module/lge_emmc_direct_access/parameters/lcd_k_cal
+    chown system system /sys/devices/platform/msm_fb.590593/mdp_kcal
+    chmod 0755 /sys/devices/platform/msm_fb.590593/mdp_kcal
 
-# Balanced
-on property:sys.perf.profile=1
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "smartassH3"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq "1008000"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq "245760"
-
-# High performance
-on property:sys.perf.profile=2
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "smartass"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq "1008000"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq "320000"
+    chown system system /sys/class/input/input3/range
+    chown system system /sys/class/input/input3/bandwidth
+    chown system system /sys/class/input/input3/mode
+    chown system system /sys/class/input/input3/value
+    chown system system /sys/class/input/input3/delay
+    chown system system /sys/class/input/input3/update
+    chown system system /sys/class/input/input3/selftest
+    chown system system /sys/class/input/input3/offset_filt_x
+    chown system system /sys/class/input/input3/offset_filt_y
+    chown system system /sys/class/input/input3/offset_filt_z
+    chown system system /sys/class/input/input3/fast_calibration_x
+    chown system system /sys/class/input/input3/fast_calibration_y
+    chown system system /sys/class/input/input3/fast_calibration_z
+    chown system system /sys/class/input/input3/eeprom_writing
+    chown system system /sys/class/input/input3/softreset
+    chown system system /sys/devices/platform/i2c-gpio.6/i2c-6/6-0044/enable

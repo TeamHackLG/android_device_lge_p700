@@ -7,3 +7,89 @@ debug.camcorder.disablemeta=1
 ro.sf.hwrotation=180
 
 ro.sf.lcd_density=240
+
+#
+# system.prop for e610
+#
+# RILD
+rild.libpath=/system/lib/libril-qc-qmi-1.so
+rild.libargs=-d /dev/smd0
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+
+# View configuration for QVGA
+view.fading_edge_length = 8
+view.touch_slop = 15
+view.minimum_fling_velocity = 25
+view.scroll_friction = 0.008
+ro.use_data_netmgrd=true
+
+# Video Acceleration
+video.accelerate.hw=1
+debug.performance.tuning=1
+
+# Memory
+ro.sys.fw.bg_apps_limit=7
+sys.mem.max_hidden_apps=7
+ro.config.max_starting_bg=4
+
+# Misc
+ro.use_data_netmgrd=true
+persist.data.ds_fmc_app.mode=0
+httplive.enable.discontinuity=true
+ro.config.sync=yes
+ro.phone_storage=0
+ro.kernel.android.checkjni=0
+ro.android.secure=0
+ro.fuse_sdcard=true
+persist.sys.strictmode.visual=0
+persist.sys.strictmode.disable=1
+persist.sys.scrollingcache=4
+power.saving.mode=1
+persist.sys.force_highendgfx=true
+
+# Enable smooth streaming
+mm.enable.smoothstreaming=true
+
+# OMX - Media
+#37491 is decimal sum of supported codecs in AAL
+#codecs: AVI AC3 ASF AAC QCP DTS 3G2 MP2TS
+ mm.enable.qcom_parser=37491 
+ mmp.enable.3g2=true 
+ mm.enable.smoothstreaming=true 
+ mm.disable.sec_smoothstreaming=true 
+ media.aac_51_output_enabled=true
+
+# VIDC: debug_levels
+# 1:ERROR 2:HIGH 4:LOW 0:NOLOGS 7:AllLOGS
+vidc.debug.level=1
+
+# For QC perf binary hooks
+# src:vendor/qcom/proprietary/android-perf/release/lib/<CPU arch>/libqc-opt.so
+com.qc.hardware=true
+ro.vendor.extension_library=/system/lib/libqc-opt.so
+dev.pm.dyn_samplingrate=1
+dev.pm.dyn_sample_period=700000
+
+# Display
+debug.sf.hw=1
+debug.egl.hw=1
+debug.composition.type=mdp
+persist.hwc.mdpcomp.enable=true
+debug.mdpcomp.maxlayer=3
+debug.mdpcomp.logs=0
+debug.gralloc.map_fb_memory=1
+com.qc.hdmi_out=false
+com.qc.hardware=true
+
+# Dalvik
+dalvik.vm.checkjni=0
+dalvik.vm.debug.alloc=0 
+dalvik.vm.dexopt-data-only=1
