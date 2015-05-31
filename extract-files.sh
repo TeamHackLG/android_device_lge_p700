@@ -1,17 +1,9 @@
 #!/bin/sh
 
-VENDOR=lge
-DEVICE=p700
+set -e
 
-BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
-rm -rf $BASE/*
+export DEVICE=p700
+export VENDOR=lge
+./../msm7x27a-common/extract-files.sh $@
 
-for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$`; do
-    DIR=`dirname $FILE`
-    if [ ! -d $BASE/$DIR ]; then
-        mkdir -p $BASE/$DIR
-    fi
-    adb pull /system/$FILE $BASE/$FILE
-done
-
-./setup-makefiles.sh
+./../msm7x27a-common/setup-makefiles.sh
