@@ -10,6 +10,8 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=u0 androidboot.selinux=permissive l
 
 TARGET_KERNEL_CONFIG := cyanogenmod_u0_defconfig
 
+TARGET_RECOVERY_FSTAB := device/lge/p700/recovery.fstab
+
 ## We need this for the flipped screen
 BOARD_CUSTOM_GRAPHICS := ../../../device/lge/p700/recovery/graphics.c
 
