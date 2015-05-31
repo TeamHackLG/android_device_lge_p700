@@ -6,5 +6,7 @@
 /devices/platform/msm_sdcc.3/mmc_host      /storage/sdcard0 vfat defaults voldmanaged=emmc:23,nonremovable
 
 # External SD
-
 /devices/platform/msm_sdcc.1/mmc_host/mmc1       auto vfat defaults                                wait,voldmanaged=sdcard1:auto
+
+#Zram
+/dev/block/zram0                           none             swap           defaults                zramsize=67108864

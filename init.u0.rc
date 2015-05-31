@@ -3,6 +3,8 @@ import init.lge-shared.rc
 on fs
     mount_all fstab.u0
 
+    swapon_all fstab.u0
+
 on boot
     chown system system /sys/class/input/input2/range
     chown system system /sys/class/input/input2/bandwidth
@@ -21,6 +23,8 @@ on boot
     chown system system /sys/class/input/input2/softreset
     chown system system /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
     chmod 0660 /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
+
+    write /proc/sys/vm/page-cluster 0
 
 ## chargermode will crash badly unless USB is configured
 on property:init.svc.charger=running
