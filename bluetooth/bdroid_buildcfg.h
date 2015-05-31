@@ -19,5 +19,6 @@
 
 #define BTM_DEF_LOCAL_NAME   "LG-P700"
 #define BTA_DISABLE_DELAY 1000
+#define BLUETOOTH_QCOM_SW TRUE
 
 #endif
