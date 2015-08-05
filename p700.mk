@@ -22,9 +22,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml
 
-# Wifi
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/wlan.ko:system/lib/modules/wlan.ko
 # Misc
 PRODUCT_PACKAGES += \
     libnetcmdiface
