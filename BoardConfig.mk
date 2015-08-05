@@ -8,7 +8,6 @@ TARGET_ARCH := arm
 BOARD_KERNEL_CMDLINE := androidboot.hardware=u0 lge.signed_image=false
 
 TARGET_KERNEL_CONFIG := cyanogenmod_u0_defconfig
-TARGET_PREBUILT_KERNEL := device/lge/p700/kernel
 
 ## We need this for the flipped screen
 BOARD_CUSTOM_GRAPHICS := ../../../device/lge/p700/recovery/graphics.c
