@@ -5,7 +5,7 @@ include device/lge/msm7x27a-common/BoardConfigCommon.mk
 TARGET_BOOTLOADER_BOARD_NAME := p700
 TARGET_ARCH := arm
 
-BOARD_KERNEL_CMDLINE := androidboot.hardware=u0 lge.signed_image=false
+BOARD_KERNEL_CMDLINE := androidboot.hardware=u0 androidboot.selinux=permissive lge.signed_image=false
 
 TARGET_KERNEL_CONFIG := cyanogenmod_u0_defconfig
 
