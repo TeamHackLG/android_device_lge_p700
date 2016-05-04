@@ -28,8 +28,8 @@ $(call inherit-product-if-exists, vendor/lge/p700/p700-vendor.mk)
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
-PRODUCT_AAPT_CONFIG := normal mdpi hdpi
-PRODUCT_AAPT_PREF_CONFIG := mdpi
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_COPY_FILES += \
     device/lge/p700/rootdir/root/fstab.u0:root/fstab.u0 \
