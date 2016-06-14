@@ -36,4 +36,8 @@ PRODUCT_COPY_FILES += \
     device/lge/p700/rootdir/system/usr/keylayout/u0_keypad.kl:system/usr/keylayout/u0_keypad.kl \
     device/lge/p700/rootdir/system/usr/keylayout/melfas-ts.kl:system/usr/keylayout/melfas-ts.kl
 
+# Light HAL
+PRODUCT_PACKAGES += \
+    lights.msm7x27a
+
 include device/lge/p700/system_prop.mk
