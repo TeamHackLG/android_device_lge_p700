@@ -1,0 +1,6 @@
+bin/sensord
+lib/hw/nfc.msm7x27a.so
+lib/hw/sensors.u0.so
+lib/libchromatix_hi542_default_video.so
+lib/libchromatix_hi542_preview.so
+vendor/firmware/libpn544_fw.so
