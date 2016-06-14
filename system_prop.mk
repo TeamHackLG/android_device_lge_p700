@@ -18,5 +18,3 @@ PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density="240"
 PRODUCT_PROPERTY_OVERRIDES += ro.sf.hwrotation="180"
 # Disable LPA
 PRODUCT_PROPERTY_OVERRIDES += lpa.decode="false"
-# Camera - We will need this?
-# PRODUCT_PROPERTY_OVERRIDES += debug.camcorder.disablemeta="1"
