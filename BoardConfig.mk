@@ -50,9 +50,6 @@ TW_NO_CPU_TEMP := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 225
 
-# /system - 562MB
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 589299712
-
 # Unified Device
 TARGET_UNIFIED_DEVICE := true
 TARGET_OTA_ASSERT_DEVICE := P700,p700,P705,p705,u0
