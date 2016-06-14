@@ -19,7 +19,6 @@ LGE_PROJECT := l
 
 # inherit from the proprietary version
 -include vendor/lge/p700/BoardConfigVendor.mk
-TARGET_BOOTLOADER_BOARD_NAME := p700
 
 BOARD_KERNEL_CMDLINE := androidboot.hardware=u0 androidboot.selinux=permissive
 

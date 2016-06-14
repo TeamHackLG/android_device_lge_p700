@@ -13,6 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),p700)
+ifeq ($(TARGET_DEVICE),p700)
 include $(call first-makefiles-under,$(call my-dir))
 endif
