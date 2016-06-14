@@ -2,7 +2,8 @@
    The device setup and all necessary integration with Android for this
    software to run on the LG Electronics Optimus L7 (P700/P705) are:
 
-   Copyright (c) 2012, The CyanogenMod Project
+   Copyright (c) 2016, The CyanogenMod Project
+   Copyright (c) 2016, TeamHackLG
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
