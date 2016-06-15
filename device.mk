@@ -16,13 +16,10 @@
 # This file includes all definitions that apply to ALL L7 devices
 # Everything in this directory will become public
 
-DEVICE_PACKAGE_OVERLAYS += device/lge/p700/overlay
-
 $(call inherit-product, device/lge/msm7x27a-common/msm7x27a-common.mk)
-
 $(call inherit-product-if-exists, vendor/lge/p700/p700-vendor.mk)
 
-$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
+DEVICE_PACKAGE_OVERLAYS += device/lge/p700/overlay
 
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
@@ -36,8 +33,15 @@ PRODUCT_COPY_FILES += \
     device/lge/p700/rootdir/system/usr/keylayout/u0_keypad.kl:system/usr/keylayout/u0_keypad.kl \
     device/lge/p700/rootdir/system/usr/keylayout/melfas-ts.kl:system/usr/keylayout/melfas-ts.kl
 
+PRODUCT_COPY_FILES += \
+    device/lge/p700/recovery/root/sbin/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
+
 # Light HAL
 PRODUCT_PACKAGES += \
     lights.msm7x27a
+
+# HWComposer
+PRODUCT_PACKAGES += \
+    hwcomposer.msm7x27a
 
 include device/lge/p700/system_prop.mk
