@@ -30,9 +30,6 @@ PRODUCT_COPY_FILES += \
     device/lge/p700/rootdir/root/ueventd.u0.rc:root/ueventd.u0.rc
 
 PRODUCT_COPY_FILES += \
-    device/lge/msm7x27a-common/rootdir/root/init.lge.shared.rc:root/init.lge.shared.rc
-
-PRODUCT_COPY_FILES += \
     device/lge/msm7x27a-common/rootdir/system/etc/AudioFilter.csv:system/etc/AudioFilter.csv \
     device/lge/msm7x27a-common/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
     device/lge/msm7x27a-common/rootdir/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
