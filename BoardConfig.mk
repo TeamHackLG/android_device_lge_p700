@@ -13,19 +13,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include device/lge/msm7x27a-common/BoardConfigCommon.mk
-
+# MSM7x27a-common
 LGE_PROJECT := l
+include device/lge/msm7x27a-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
 -include vendor/lge/p700/BoardConfigVendor.mk
 
+# Kernel
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x1200000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=u0 androidboot.selinux=permissive
-
 TARGET_KERNEL_CONFIG := cyanogenmod_u0_nonfc_defconfig
 
+# Partitions
+BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 589299712
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 2920577761
+
+# Recovery FSTAB
 TARGET_RECOVERY_FSTAB := device/lge/p700/rootdir/root/fstab.u0
 
+# BT Include
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/p700/bluetooth
 
 # Recovery
