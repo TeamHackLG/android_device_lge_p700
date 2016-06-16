@@ -34,10 +34,7 @@ on boot
     chown system system /sys/class/input/input2/fast_calibration_z
     chown system system /sys/class/input/input2/eeprom_writing
     chown system system /sys/class/input/input2/softreset
-    chown system system /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
-    chmod 0660 /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
-
-
+    chown system system /sys/devices/platform/i2c-gpio.6/i2c-6/6-0044/enable
     chown system system /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
     chmod 0660 /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
 
@@ -45,20 +42,15 @@ on boot
     chmod 0600 /dev/pn544
     chown nfc nfc /dev/pn544
 
-on boot
     # Torch perms
     chown system camera /sys/devices/platform/i2c-gpio.3/i2c-3/3-0030/brightness_uA
     chmod 0777 /sys/devices/platform/i2c-gpio.3/i2c-3/3-0030/brightness_uA
-
-    chown root system /sys/devices/platform/mdp.524801/kcal
-    chmod 0664 /sys/devices/platform/mdp.524801/kcal
-    restorecon /sys/devices/platform/mdp.524801/kcal
 
     chown system system /sys/class/leds/button-backlight/max_brightness
     chmod 0664 /sys/class/leds/button-backlight/max_brightnes
     restorecon /sys/class/leds/button-backlight/max_brightnes
 
-## chargermode will crash badly unless USB is configured
+# ChargerMode will crash badly unless USB is configured
 on property:init.svc.charger=running
     write /sys/devices/platform/i2c-gpio.5/i2c-5/5-0038/backlight/lm3530-bl/brightness 120
     start adbd
@@ -72,4 +64,3 @@ on property:init.svc.charger=running
     write /sys/class/android_usb/android0/functions adb
     write /sys/class/android_usb/android0/enable 1
     start adbd
-
