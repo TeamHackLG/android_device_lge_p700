@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import init.lge-shared.rc
+import init.lge.shared.rc
 
 on fs
     mount_all fstab.u0
