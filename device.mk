@@ -51,4 +51,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     hwcomposer.msm7x27a
 
+# Only Interpret the system apps due to low space partitions
+PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := --compiler-filter=interpret-only
+$(call add-product-dex-preopt-module-config,services,--compiler-filter=space)
+
 include device/lge/p700/system_prop.mk
