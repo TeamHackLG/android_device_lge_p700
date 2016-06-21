@@ -13,10 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-key 102   MENU       	VIRTUAL
-key 139   MENU          VIRTUAL
-key 59    MENU          VIRTUAL
+key 102   MENU
+key 139   MENU
+key 59    MENU
 
-key 158   BACK          VIRTUAL
-key 330   BACK          VIRTUAL
-key 62    BACK 		VIRTUAL
+key 158   BACK
+key 330   BACK
+key 62    BACK

@@ -14,19 +14,19 @@
 # limitations under the License.
 
 # Function keys
-key 59    MENU              WAKE
-key 110   MENU              WAKE
-key 139   MENU              WAKE
+key 59    MENU
+key 110   MENU
+key 139   MENU
 
-key 60    HOME              WAKE
-key 102   HOME              WAKE
-key 142   HOME              WAKE_DROPPED
+key 60    HOME
+key 102   HOME
+key 142   HOME
 
-key 62    BACK              WAKE_DROPPED
-key 158   BACK              WAKE_DROPPED
+key 62    BACK
+key 158   BACK
 
-key 87    POWER             WAKE
+key 87    POWER
 
-key 115   VOLUME_UP         WAKE_DROPPED
-key 114   VOLUME_DOWN       WAKE_DROPPED
+key 115   VOLUME_UP
+key 114   VOLUME_DOWN
 
