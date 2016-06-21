@@ -43,10 +43,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lights.msm7x27a
 
-# Enable Torch
-PRODUCT_PACKAGES += \
-    Torch
-
 # HWComposer
 PRODUCT_PACKAGES += \
     hwcomposer.msm7x27a
