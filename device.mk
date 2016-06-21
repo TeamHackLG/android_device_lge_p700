@@ -21,7 +21,7 @@ $(call inherit-product-if-exists, vendor/lge/p700/p700-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/lge/p700/overlay
 
-PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_COPY_FILES += \
