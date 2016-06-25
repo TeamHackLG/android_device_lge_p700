@@ -25,9 +25,14 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x1200000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=u0 androidboot.selinux=permissive
 TARGET_KERNEL_CONFIG := cyanogenmod_u0_nonfc_defconfig
 
+# 8388608 - L7 not support recovery partition with +8MB,
+# but TWRP building not allow us to pass the build with only 8MB limit
+# Use 12MB for now (precaution), so don't flash this recovery
+# NEVER
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 12582912
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 589299712
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2920577761
 
@@ -48,16 +53,13 @@ BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # TWRP
-RECOVERY_VARIANT := omni
-TW_INTERNAL_STORAGE_PATH := "/data/media"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-TW_EXTERNAL_STORAGE_PATH := "/external sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-TW_DEFAULT_EXTERNAL_STORAGE := true
-TW_FLASH_FROM_STORAGE := true
-TW_NO_CPU_TEMP := true
-TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
-TW_MAX_BRIGHTNESS := 225
+#RECOVERY_VARIANT := omni
+#TW_EXTERNAL_STORAGE_PATH := "/external sd"
+#TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+#TW_DEFAULT_EXTERNAL_STORAGE := true
+#TW_FLASH_FROM_STORAGE := true
+#TW_NO_CPU_TEMP := true
+#TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 
 # Unified Device
 TARGET_UNIFIED_DEVICE := true
