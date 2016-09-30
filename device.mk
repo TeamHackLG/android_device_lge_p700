@@ -51,7 +51,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density="240" \
     ro.sf.hwrotation="180"
-
-# Disable LPA
-PRODUCT_PROPERTY_OVERRIDES += \
-    lpa.decode="false"
