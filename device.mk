@@ -47,4 +47,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     hwcomposer.msm7x27a
 
-include device/lge/p700/system_prop.mk
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density="240" \
+    ro.sf.hwrotation="180"
+
+# Disable LPA
+PRODUCT_PROPERTY_OVERRIDES += \
+    lpa.decode="false"
