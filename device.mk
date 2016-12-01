@@ -24,6 +24,11 @@ DEVICE_PACKAGE_OVERLAYS += device/lge/p700/overlay
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+# Boot animation
+TARGET_BOOTANIMATION_HALF_RES := true
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
+
 PRODUCT_COPY_FILES += \
     device/lge/p700/rootdir/root/fstab.u0:root/fstab.u0 \
     device/lge/p700/rootdir/root/init.u0.rc:root/init.u0.rc \
