@@ -14,17 +14,11 @@
 # limitations under the License.
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/cm/config/common_mini_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/lge/p700/full_p700.mk)
 
-# Bootanimation
-TARGET_SCREEN_HEIGHT := 800
-TARGET_SCREEN_WIDTH := 480
-
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := cm_p700
 PRODUCT_RELEASE_NAME := L7
-
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
