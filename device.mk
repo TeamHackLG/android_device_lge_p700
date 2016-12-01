@@ -39,10 +39,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/msm7x27a-common/recovery/root/sbin/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
 
-# Light HAL
-PRODUCT_PACKAGES += \
-    lights.msm7x27a
-
 # Enable Torch
 PRODUCT_PACKAGES += \
     Torch
