@@ -1,5 +1,6 @@
-# Copyright 2016 The Android Open Source Project
-# Copyright 2016 TeamHacklG
+# Copyright (C) 2016 The Android Open Source Project
+#               2017 The LineageOS Project
+#                    TeamHacklG
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,5 +18,5 @@ add_lunch_combo aosp_p700-userdebug
 add_lunch_combo aosp_p700-eng
 add_lunch_combo full_p700-userdebug
 add_lunch_combo full_p700-eng
-add_lunch_combo cm_p700-eng
-add_lunch_combo cm_p700-userdebug
+add_lunch_combo lineage_p700-eng
+add_lunch_combo lineage_p700-userdebug

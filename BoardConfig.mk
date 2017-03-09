@@ -1,5 +1,6 @@
-# Copyright 2016 The Android Open Source Project
-# Copyright 2016 TeamHacklG
+# Copyright (C) 2016 The Android Open Source Project
+#               2017 The LineageOS Project
+#                    TeamHacklG
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,7 +21,7 @@ include device/lge/msm7x27a-common/BoardConfigCommon.mk
 include vendor/lge/p700/BoardConfigVendor.mk
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_u0_nonfc_defconfig
+TARGET_KERNEL_CONFIG := lineage_u0_nonfc_defconfig
 
 # 8388608 - L7 not support recovery partition with +8MB,
 # but TWRP building not allow us to pass the build with only 8MB limit
