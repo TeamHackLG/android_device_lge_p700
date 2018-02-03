@@ -59,7 +59,3 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 # Unified Device
 TARGET_UNIFIED_DEVICE := true
 TARGET_OTA_ASSERT_DEVICE := P700,p700,P705,p705,u0
-
-# Set Device in init based on baseband
-TARGET_INIT_VENDOR_LIB := libinit_u0
-TARGET_LIBINIT_DEFINES_FILE := device/lge/p700/init/init_u0.cpp
